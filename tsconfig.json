@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "baseUrl": "src",
+    "moduleResolution": "node",
+    "strict": true,
+    "noEmit": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "types": [
+        "@emotion/react/types/css-prop"
+    ]
+},
+    "include": ["src", "emotion.d.ts"]
+}

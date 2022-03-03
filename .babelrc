@@ -1,0 +1,28 @@
+{
+    "plugins": [
+        "@babel/plugin-transform-spread",
+        "@babel/plugin-transform-regenerator",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-classes",
+        "babel-plugin-macros",
+        [
+            "@emotion/babel-plugin-jsx-pragmatic",
+            {
+                "export": "jsx",
+                "import": "__cssprop",
+                "module": "@emotion/react"
+            }
+            ],
+            [
+            "@babel/plugin-transform-react-jsx",
+            {
+                "pragma": "__cssprop",
+                "pragmaFrag": "React.Fragment",
+                "throwIfNamespace": false // defaults to true
+                // "runtime": "automatic", // defaults to classic
+                // "importSource": "custom-jsx-library" // defaults to react
+            }
+            ]
+        ],
+    "presets": ["@babel/env", "@babel/react", "@babel/typescript", "@emotion/babel-preset-css-prop"]
+}
