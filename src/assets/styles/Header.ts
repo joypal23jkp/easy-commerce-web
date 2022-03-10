@@ -28,6 +28,11 @@ export const search_icon_color = css`
 
 export const navItem = css`
     margin: 0 12px;
+    text-align: center;    
+    display: flex;   
+    justify-content: center;     
+    align-items: center;
+
 `;
 
 export const searchBar = css`
@@ -52,16 +57,11 @@ export const image = css`
 
 `
 export const brandName = css`
-    position: absolute;
-    left: 130%;
-    right: -340%;
-    top: 5%;
-    bottom: 5%;
-    font-family: Red Hat Display;
+    // position: absolute;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
     line-height: 36px;
     color: #0C2146;
-
+    margin-left:15px;
 `
