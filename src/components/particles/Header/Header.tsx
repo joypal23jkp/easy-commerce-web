@@ -14,7 +14,7 @@ import {
   HeartOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons";
-// import Image1 from "../../../assets/images/Letter.png";
+import {Avatar, Badge, Button, Image} from "antd";
 
 export default function Header() {
   return (
@@ -110,17 +110,19 @@ export default function Header() {
             height: "100%",
           }}
         >
+
           <div className="nav_item" css={navItem}>
             <Link
-              to="/login"
+              to={"/"}
               style={{
                 color: "#5A5B6A",
                 fontWeight: 600,
               }}
             >
-              Sign in
+                <Button style={{
+                    borderRadius: 4
+                }}>Wishlist</Button>
             </Link>
-            <UserOutlined style={{ fontSize: "18px", padding: "4px" }} />
           </div>
           <div className="nav_item" css={navItem}>
             <Link
@@ -130,9 +132,10 @@ export default function Header() {
                 fontWeight: 600,
               }}
             >
-              Wishlist
+                <Button style={{
+                    borderRadius: 4
+                }}>Sign in</Button>
             </Link>
-            <HeartOutlined style={{ fontSize: "18px", padding: "4px" }} />
           </div>
           <div className="nav_item" css={navItem}>
             <Link
@@ -142,11 +145,27 @@ export default function Header() {
                 fontWeight: 600,
               }}
             >
-              Cart
+            <Badge count={5}>
+                <Button style={{
+                    borderRadius: 4
+                }}>
+                    My Cart
+                </Button>
+            </Badge>
             </Link>
-            <ShoppingCartOutlined
-              style={{ fontSize: "18px", padding: "4px" }}
-            />
+
+          </div>
+          <div className="nav_item" css={navItem}>
+            <Link
+              to={"/"}
+              style={{
+                color: "#5A5B6A",
+                fontWeight: 600,
+              }}
+            >
+                <Avatar src={<Image src="https://joeschmoe.io/api/v1/random" style={{ width: 32 }} />} />
+            </Link>
+
           </div>
         </nav>
       </div>
