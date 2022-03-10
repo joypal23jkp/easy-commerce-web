@@ -12,7 +12,7 @@ class SearchComponent extends React.Component<any, any>{
                     placeholder="search here"
                     allowClear
                     bordered={false}
-                    style={{ width: 380, fontFamily: "'Inter', sans-serif" }}
+                    style={{ width: "100%", fontFamily: "'Inter', sans-serif" }}
                 />
                 <img src={SearchImage} alt="SearchImage" />
             </>

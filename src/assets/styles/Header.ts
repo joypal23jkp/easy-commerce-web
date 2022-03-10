@@ -3,9 +3,11 @@ import { themeColor } from "./_common";
 
 export const main_content = css`
       background-color: white;
-      border-radius: 4px;
       display: flex;
       justify-content: space-around;
+      min-height: 80px;
+      max-width: 1920px;
+      margin: auto;
     `;
 
 export const search = css`
@@ -37,6 +39,7 @@ export const searchBar = css`
     padding-top: 2px;
     color: white;
     margin-top: 18px;
+    width: 33%;
 `;
 export const icon_container = css`
     width:100%;
