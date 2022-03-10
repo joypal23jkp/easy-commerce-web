@@ -12,7 +12,12 @@ class SelectComponent extends Component<any, any>{
         // @ts-ignore
         return (
             <>
-                <Select defaultValue={provinceData[0]} style={{ width: 150 }} bordered={false} onChange={handleProvinceChange}>
+                <Select
+                    defaultValue={provinceData[0]}
+                    style={{ width: 150 }}
+                    bordered={false}
+                    onChange={handleProvinceChange}
+                >
                     {provinceData.map((province:string) => (
                         <Option key={province}>{province}</Option>
                     ))}
