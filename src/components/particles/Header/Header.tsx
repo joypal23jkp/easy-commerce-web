@@ -14,7 +14,7 @@ import {
   HeartOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons";
-import {Avatar, Button, Image} from "antd";
+import {Avatar, Badge, Button, Image} from "antd";
 
 export default function Header() {
   return (
@@ -145,11 +145,13 @@ export default function Header() {
                 fontWeight: 600,
               }}
             >
-              <Button style={{
-                  borderRadius: 4
-              }}>
-                  My Cart
-              </Button>
+            <Badge count={5}>
+                <Button style={{
+                    borderRadius: 4
+                }}>
+                    My Cart
+                </Button>
+            </Badge>
             </Link>
 
           </div>
