@@ -14,7 +14,7 @@ class SelectComponent extends Component<any, any>{
             <>
                 <Select
                     defaultValue={provinceData[0]}
-                    style={{ width: 150 }}
+                    style={{ width: "25%" }}
                     bordered={false}
                     onChange={handleProvinceChange}
                 >
