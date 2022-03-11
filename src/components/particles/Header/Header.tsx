@@ -64,7 +64,7 @@ export default function Header() {
                 style={{
                     color: "#5A5B6A",
                     fontWeight: 500,
-                    fontSize: 20,
+                    fontSize: 16,
                     display: "flex",
                     alignItems: "center"
                 }}
@@ -78,7 +78,7 @@ export default function Header() {
                 style={{
                     color: "#5A5B6A",
                     fontWeight: 500,
-                    fontSize: 20,
+                    fontSize: 16,
                     display: "flex",
                     alignItems: "center"
                 }}
