@@ -36,7 +36,7 @@ export const navItem = css`
 `;
 
 export const searchBar = css`
-    background: #e0e0e0;
+    background: #EDEDF0;
     border-radius: 99px;
     height: 36px;
     padding-left: 12px;
@@ -44,7 +44,8 @@ export const searchBar = css`
     padding-top: 2px;
     color: white;
     margin-top: 18px;
-    width: 33%;
+    width: 40%;
+    
 `;
 export const icon_container = css`
     width:100%;

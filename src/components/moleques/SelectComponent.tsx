@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import { Select}  from "antd";
+import React, { Component } from "react";
+import { Select } from "antd";
 const { Option } = Select;
 
 const provinceData = ['Select Category', 'Zhejiang', 'Jiangsu'];
@@ -14,11 +14,11 @@ class SelectComponent extends Component<any, any>{
             <>
                 <Select
                     defaultValue={provinceData[0]}
-                    style={{ width: 150 }}
+                    style={{ width: "25%" }}
                     bordered={false}
                     onChange={handleProvinceChange}
                 >
-                    {provinceData.map((province:string) => (
+                    {provinceData.map((province: string) => (
                         <Option key={province}>{province}</Option>
                     ))}
                 </Select>

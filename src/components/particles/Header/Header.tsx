@@ -14,7 +14,7 @@ import {
   HeartOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons";
-import {Avatar, Badge, Button, Image} from "antd";
+import { Avatar, Badge, Button, Image } from "antd";
 
 export default function Header() {
   return (
@@ -92,13 +92,13 @@ export default function Header() {
         >
           |
         </span>
-        <SearchComponent />
+        <span><SearchComponent /></span>
       </div>
 
       <div
         className="nav_list"
         style={{
-          width: "33%",
+          width: "25%",
 
         }}
       >
@@ -116,12 +116,14 @@ export default function Header() {
               to={"/"}
               style={{
                 color: "#5A5B6A",
-                fontWeight: 600,
+                fontWeight: 700,
+                fontSize: "20px",
               }}
             >
-                <Button style={{
-                    borderRadius: 4
-                }}>Wishlist</Button>
+              <Button style={{
+                borderRadius: 4,
+                fontWeight: "bold",
+              }}>Wishlist</Button>
             </Link>
           </div>
           <div className="nav_item" css={navItem}>
@@ -129,12 +131,14 @@ export default function Header() {
               to={"/"}
               style={{
                 color: "#5A5B6A",
-                fontWeight: 600,
+                fontWeight: 700,
+                fontSize: "20px",
               }}
             >
-                <Button style={{
-                    borderRadius: 4
-                }}>Sign in</Button>
+              <Button style={{
+                borderRadius: 4,
+                fontWeight: "bold",
+              }}>Sign in</Button>
             </Link>
           </div>
           <div className="nav_item" css={navItem}>
@@ -142,16 +146,18 @@ export default function Header() {
               to={"/"}
               style={{
                 color: "#5A5B6A",
-                fontWeight: 600,
+                fontWeight: 700,
+                fontSize: "20px",
               }}
             >
-            <Badge count={5}>
+              <Badge count={5}>
                 <Button style={{
-                    borderRadius: 4
+                  borderRadius: 4,
+                  fontWeight: "bold",
                 }}>
-                    My Cart
+                  My Cart
                 </Button>
-            </Badge>
+              </Badge>
             </Link>
 
           </div>
@@ -163,7 +169,7 @@ export default function Header() {
                 fontWeight: 600,
               }}
             >
-                <Avatar src={<Image src="https://joeschmoe.io/api/v1/random" style={{ width: 32 }} />} />
+              <Avatar src={<Image src="https://joeschmoe.io/api/v1/random" style={{ width: 32 }} />} />
             </Link>
 
           </div>
