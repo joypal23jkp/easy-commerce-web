@@ -88,26 +88,34 @@ export default function Header() {
       </div>
 
       <div className="search_bar" css={searchBar}>
-        <SelectComponent />
-        <span
-          style={{
-            color: "black",
-          }}
-        >
-          |
-        </span>
-        <SearchComponent />
+        <div style={{
+            width: "66%",
+            margin: "auto",
+            background: "#e0e0e0",
+            borderRadius: 50,
+            height: "50%",
+            paddingLeft: 12,
+            paddingRight: 12,
+            paddingTop: 2,
+            color: "white",
+        }}>
+            <SelectComponent />
+            <span style={{ color: "black" }}>|</span>
+            <SearchComponent />
+        </div>
       </div>
 
       <div
         className="nav_list"
         style={{
-            width: "33%"
+            width: "25%"
         }}
       >
         <nav
           style={{
-            display: "flex",
+             display: "flex",
+              float: "right",
+              height: "100%"
           }}
         >
 

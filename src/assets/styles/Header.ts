@@ -28,18 +28,16 @@ export const search_icon_color = css`
 
 export const navItem = css`
     margin: 0 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
 `;
 
 export const searchBar = css`
-    background: #e0e0e0;
-    border-radius: 99px;
-    height: 36px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 2px;
-    color: white;
-    margin-top: 18px;
-    width: 33%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 export const icon_container = css`
     width:100%;
