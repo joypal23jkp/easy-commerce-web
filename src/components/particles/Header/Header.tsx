@@ -14,7 +14,7 @@ import {
   HeartOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons";
-// import Image1 from "../../../assets/images/Letter.png";
+import {Avatar, Badge, Button, Image} from "antd";
 
 export default function Header() {
   return (
@@ -88,39 +88,49 @@ export default function Header() {
       </div>
 
       <div className="search_bar" css={searchBar}>
-        <SelectComponent />
-        <span
-          style={{
-            color: "black",
-          }}
-        >
-          |
-        </span>
-        <SearchComponent />
+        <div style={{
+            width: "66%",
+            margin: "auto",
+            background: "#e0e0e0",
+            borderRadius: 50,
+            height: "50%",
+            paddingLeft: 12,
+            paddingRight: 12,
+            paddingTop: 2,
+            color: "white",
+        }}>
+            <SelectComponent />
+            <span style={{ color: "black" }}>|</span>
+            <SearchComponent />
+        </div>
       </div>
 
       <div
         className="nav_list"
         style={{
-            width: "33%"
+            width: "25%"
         }}
       >
         <nav
           style={{
-            display: "flex",
+             display: "flex",
+              float: "right",
+              height: "100%"
           }}
         >
+
           <div className="nav_item" css={navItem}>
             <Link
-              to="/login"
+              to={"/"}
               style={{
                 color: "#5A5B6A",
                 fontWeight: 600,
               }}
             >
-              Sign in
+                <Button style={{
+                    borderRadius: 4
+                }}>Wishlist</Button>
             </Link>
-            <UserOutlined style={{ fontSize: "18px", padding: "4px" }} />
           </div>
           <div className="nav_item" css={navItem}>
             <Link
@@ -130,9 +140,10 @@ export default function Header() {
                 fontWeight: 600,
               }}
             >
-              Wishlist
+                <Button style={{
+                    borderRadius: 4
+                }}>Sign in</Button>
             </Link>
-            <HeartOutlined style={{ fontSize: "18px", padding: "4px" }} />
           </div>
           <div className="nav_item" css={navItem}>
             <Link
@@ -142,11 +153,27 @@ export default function Header() {
                 fontWeight: 600,
               }}
             >
-              Cart
+            <Badge count={5}>
+                <Button style={{
+                    borderRadius: 4
+                }}>
+                    My Cart
+                </Button>
+            </Badge>
             </Link>
-            <ShoppingCartOutlined
-              style={{ fontSize: "18px", padding: "4px" }}
-            />
+
+          </div>
+          <div className="nav_item" css={navItem}>
+            <Link
+              to={"/"}
+              style={{
+                color: "#5A5B6A",
+                fontWeight: 600,
+              }}
+            >
+                <Avatar src={<Image src="https://joeschmoe.io/api/v1/random" style={{ width: 32 }} />} />
+            </Link>
+
           </div>
         </nav>
       </div>

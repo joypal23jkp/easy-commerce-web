@@ -9,6 +9,7 @@ import Routes from "../App/Routes";
 import Header from "../components/particles/Header/Header";
 import Footer from "../components/particles/Footer/Footer";
 import styled from "@emotion/styled";
+import "../style.css"
 
 const RootStyledRouter = styled.div`
     max-width: 1200px;
