@@ -23,7 +23,8 @@ export default function Header() {
           style={{
               width: "25%",
               display: "flex",
-              justifyContent: "space-between"
+              justifyContent: "space-between",
+              margin: "0 16px"
           }}
       >
           <div className="icon_container">
