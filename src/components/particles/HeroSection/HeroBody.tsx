@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+
 import DepartmentTree from "./DepartmentTree";
 import BannerCarousel from "./BannerCarousel";
-
-import styled from "@emotion/styled";
 import HeroHeader from "./HeroHeader";
+
 import BannerOne from "../../../assets/images/banners/banner1.jpg"
-import {AlignCenterOutlined, RightOutlined} from "@ant-design/icons";
+
+import { RightOutlined } from "@ant-design/icons";
+import styled  from "@emotion/styled";
+import jsx from "@emotion/react";
 
 interface PropsType {
     children: JSX.Element
@@ -54,33 +57,22 @@ const BannerCarouselComponent = styled.div`
 `;
 
 
-class HeroBody extends React.Component {
+const HeroBody = (props: PropsType) => {
 
-    constructor(props: PropsType) {
-        super(props);
-        this.state = {selectedElement: <BannerCarousel/>}
-        this.mouseOver = this.mouseOver.bind(this);
-        this.mouseOut = this.mouseOut.bind(this);
+    const [selectedElement, setSelectedElement] = useState(<BannerCarousel />)
+
+    const mouseOver = () => {
+        setSelectedElement(<DepartmentTree />)
     }
-    mouseOver(){
-        this.setState({
-            selectedElement: <DepartmentTree />
-        })
-    }
-    mouseOut(){
-        this.setState({
-            selectedElement: <BannerCarousel />
-        })
+    const mouseOut = () =>{
+        setSelectedElement(<BannerCarousel />)
     }
 
-
-    // @ts-ignore
-    render() {
-        const element = this.state.selectedElement;
-        return (
-            <HeroBodyComponent>
-                <DepartmentListWrapper>
-                    <div style={{
+    return (
+        <HeroBodyComponent>
+            <DepartmentListWrapper>
+                <div
+                    css={{
                         fontWeight: 500,
                         fontSize: 18,
                         marginBottom: 24,
@@ -89,42 +81,39 @@ class HeroBody extends React.Component {
                         borderRadius: 5,
                         padding: '8px 12px',
                         display: "flex"
-                    }}>
-                        <div style={{
-                            width: "100%",
-                            textAlign: "center"
-                        }}>
-                            Departments
-                        </div>
+                    }}
+                >
+                    <div css={{ width: "100%",  textAlign: "center" }}>
+                        Departments
                     </div>
-                    <DepartmentList onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} >
-                        <DepartmentListItem>
-                            <RightOutlined style={{
-                                fontSize: 12,
-                                marginRight: 12
-                            }}/>
+                </div>
+                <DepartmentList onMouseOver={mouseOver} onMouseOut={mouseOut} >
+                    <DepartmentListItem>
+                        <RightOutlined css={{
+                            fontSize: 12,
+                            marginRight: 12
+                        }}/>
 
-                            Premium Stores
-                        </DepartmentListItem>
-                        <DepartmentListItem>
-                            <RightOutlined style={{
-                                fontSize: 12,
-                                marginRight: 12
-                            }}/>
-                            Women
-                        </DepartmentListItem>
-                    </DepartmentList>
-                </DepartmentListWrapper>
-                <BannerCarouselComponent>
-                    <HeroHeader />
-                    <img src={BannerOne} alt="B1" style={{
-                        width: '100%',
-                        borderRadius: '0 5px 5px 0'
-                    }}/>
-                </BannerCarouselComponent>
-            </HeroBodyComponent>
-        );
-    }
+                        Premium Stores
+                    </DepartmentListItem>
+                    <DepartmentListItem>
+                        <RightOutlined css={{
+                            fontSize: 12,
+                            marginRight: 12
+                        }}/>
+                        Women
+                    </DepartmentListItem>
+                </DepartmentList>
+            </DepartmentListWrapper>
+            <BannerCarouselComponent>
+                <HeroHeader />
+                <img src={BannerOne} alt="B1" style={{
+                    width: '100%',
+                    borderRadius: '0 5px 5px 0'
+                }}/>
+            </BannerCarouselComponent>
+        </HeroBodyComponent>
+    );
 }
 
 export default HeroBody;

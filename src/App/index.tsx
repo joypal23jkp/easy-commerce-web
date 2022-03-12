@@ -12,7 +12,7 @@ import styled from "@emotion/styled";
 import "../style.css"
 
 const RootStyledRouter = styled.div`
-    max-width: 1200px;
+    max-width: 1268px;
     margin: auto;
 `;
 
