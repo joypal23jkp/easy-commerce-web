@@ -1,3 +1,16 @@
 .ant-input{
     background: transparent;
 }
+
+.category-tree .ant-tree-switcher-noop{
+    display: none;
+}
+
+.category-tree .ant-tree-node-content-wrapper{
+    font-size: 16px;
+    font-weight: 500;
+}
+.category-tree .ant-tree-node-content-wrapper-normal{
+    font-size: 16px;
+    font-weight: normal;
+}
