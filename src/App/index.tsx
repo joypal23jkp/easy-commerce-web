@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import 'antd/dist/antd.css';
 import React from "react";
-import { jsx } from "@emotion/react";
+import { jsx, } from "@emotion/react";
 import { BrowserRouter } from "react-router-dom";
 
 import Routes from "../App/Routes";
@@ -13,19 +13,22 @@ import "../style.css"
 
 
 const RootStyledRouter = styled.div`
-    max-width: 1200px;
+    max-width: 1268px;
     margin: auto;
 `;
+
+const ThemeContext = React.createContext('light');
 
 export const App: React.FC = (props) => {
     return (
         <BrowserRouter>
-            <Header />
-
-            <RootStyledRouter>
-                <Routes />
-            </RootStyledRouter>
-            <Footer />
+            <ThemeContext.Provider value='dark'>
+                <Header />
+                <RootStyledRouter>
+                    <Routes />
+                </RootStyledRouter>
+                <Footer />
+            </ThemeContext.Provider>
         </BrowserRouter>
     );
 }

@@ -8,7 +8,7 @@ const Category = (props: any) => {
             <ul style={{
                 listStyleType: "none",
                 margin: 0,
-                padding: "16px 0",
+                padding: "24px 0",
                 overflow: "hidden",
                 display: "flex",
                 justifyContent: "space-between",
