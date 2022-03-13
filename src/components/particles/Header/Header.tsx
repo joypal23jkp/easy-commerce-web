@@ -41,9 +41,11 @@ export default function Header() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 style={{
-                  background: "linear-gradient(90deg, #2979FF 0%, #4C589E 100%",
-                  padding: 4,
-                  borderRadius: 5,
+                  color: "#5A5B6A",
+                  fontWeight: 500,
+                  fontSize: 16,
+                  display: "flex",
+                  alignItems: "center"
                 }}
               >
                 <path
@@ -56,25 +58,11 @@ export default function Header() {
           </Link>
         </div>
 
-        <Link to="/"
-          style={{
-            color: "#5A5B6A",
-            fontWeight: 500,
-            fontSize: 20,
-            display: "flex",
-            alignItems: "center"
-          }}
-        >
-          <span>
-            Sell on Shopka
-          </span>
-        </Link>
-
         <Link to="/register"
           style={{
             color: "#5A5B6A",
             fontWeight: 500,
-            fontSize: 20,
+            fontSize: 16,
             display: "flex",
             alignItems: "center"
           }}
