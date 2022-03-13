@@ -1,4 +1,5 @@
 import {LoremIpsum} from "lorem-ipsum";
+import {ArrowRightOutlined} from "@ant-design/icons";
 const loremIpsum = new LoremIpsum({
     sentencesPerParagraph: {
         max: 8,
@@ -20,4 +21,36 @@ for (let start = 0; start < 10; start++ ){
 }
 
 
+// @ts-ignore
+export const categoryTree: any = [
+    {
+      title: 'Electronics',
+      key: 'electronics',
+      children: [
+        {
+          title: 'Cell Phones & Smartphones',
+          key: 'cell-phones-&-smartphones',
+          children: [
+            {
+              title: 'Cell phone Accessories',
+              key: 'cell-phone-accessories',
+            },
+            {
+              title: 'Applications',
+              key: 'applications',
+            },
+            {
+              title: 'Smart Watches',
+              key: 'smart-watches',
+
+            },
+          ],
+        },
+        {
+            title: 'Business & Industrial',
+            key: 'business-&-industrial',
+        }
+      ],
+    },
+  ];
 export default categories;

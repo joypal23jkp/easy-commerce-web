@@ -1,19 +1,23 @@
 import React from "react";
-
-import Hero from "../components/particles/HeroSection/Hero";
-import Feature from "../components/particles/FeatureComponentsWrapper/Feature";
-import Brand from "../components/particles/BrandComponentWrapper/Brand";
-import Category from "../components/particles/Header/Category";
-
+import { jsx } from "@emotion/react";
 import categories from "../providers/CategoryProvider";
+import Hero from "../components/particles/HeroSection/Hero";
+import Department from "../components/particles/departments";
+import Category from "../components/particles/Header/Category";
 
 export const HomePage: React.FC = () => {
     return(
-        <div>
+        <>
             <Category categories={categories} />
-            <Hero />
-            <Feature />
-            <Brand />
-        </div>
+            <div css={{ display: "flex", width: "100%" }}>
+                <div css={{ width: "25%" }}>
+                    <Department />
+                </div>
+                <div css={{ width: "75%" }}>
+                    <Hero />
+                </div>
+
+            </div>
+        </>
     );
 }

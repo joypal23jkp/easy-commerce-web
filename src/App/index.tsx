@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import 'antd/dist/antd.css';
 import React from "react";
-import { jsx } from "@emotion/react";
+import {jsx, ThemeContext} from "@emotion/react";
 import { BrowserRouter } from "react-router-dom";
 
 import Routes from "../App/Routes";
@@ -16,14 +16,18 @@ const RootStyledRouter = styled.div`
     margin: auto;
 `;
 
+const ThemeContext = React.createContext('light');
+
 export const App: React.FC = (props) => {
     return(
         <BrowserRouter>
-            <Header />
-            <RootStyledRouter>
-                <Routes />
-            </RootStyledRouter>
-            <Footer />
+            <ThemeContext.Provider value='dark'>
+                <Header />
+                <RootStyledRouter>
+                    <Routes />
+                </RootStyledRouter>
+                <Footer />
+            </ThemeContext.Provider>
         </BrowserRouter>
     );
 }
